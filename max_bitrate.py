@@ -11,7 +11,7 @@
 # n0_j: Some random value?
 # bw_hz: Bandwith, in Hz
 
-## Output: What does this script do?
+## Output: Determines the maximum achievable bitrate given several input parameters
 
 ## Written by Carl Hayden
 
