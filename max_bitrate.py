@@ -20,7 +20,8 @@ import math
 import sys # argv
 
 ## Defining Constants
-LLoss = 1
+c = 2.99792458e8
+LLoss = 0.79
 LAtmo = 1
 
 ## Initialize Script Arguments
@@ -51,9 +52,9 @@ else:
 
 ## Main Script
 
-C = tx_w * LLoss * tx_gain_db * ((freq_hz / (4*math.pi*dist_km))**2) * LAtmo * rx_gain_db
+C = tx_w * LLoss * tx_gain_db * (((c/freq_hz) / (4*math.pi*(dist_km*1000)))**2) * LAtmo * rx_gain_db
 N = n0_j * bw_hz
 
-r_max = bw_hz * math.log2((1 + C/N)) * 1e-6 # Note: r_max given in Mbps, as noted by the 1*e-6
+r_max = bw_hz * math.log2((1 + C/N)) # Note: r_max given in bit/sec
 
 print(math.floor(r_max))
