@@ -21,7 +21,7 @@ import sys # argv
 
 ## Defining Constants
 c = 2.99792458e8
-LLoss = 1
+LLoss = 0.79
 LAtmo = 1
 
 ## Initialize Script Arguments
